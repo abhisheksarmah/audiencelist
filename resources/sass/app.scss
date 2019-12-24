@@ -1,0 +1,269 @@
+@import "fonts";
+
+/*! purgecss start ignore */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "nprogress";
+@import "vuesnackbar";
+@import "datepicker";
+@import "quillsnow";
+@import "timepicker";
+@import "trendchart";
+/*! purgecss end ignore */
+
+@import "button";
+@import "file";
+@import "form";
+@import "listgroup";
+@import "switch";
+@import "table";
+@import "tags";
+
+@import "tailwindcss/utilities";
+
+body {
+    -webkit-tap-highlight-color: transparent;
+}
+
+// .shadow-base {
+//   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+// }
+.shadow-sm {
+    box-shadow: 0 1px 2px rgba($color: #000000, $alpha: 0.06);
+}
+
+.shadow-dropdown {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 -2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.list-group li:last-child {
+    border-bottom: 0;
+}
+.border-b.last {
+    border-bottom: 0 !important;
+}
+
+input::placeholder {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.menu-active {
+    position: relative;
+}
+.menu-active:after {
+    bottom: 20%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    content: "";
+    height: 6px;
+    width: 6px;
+    border-radius: 100%;
+    background-color: #dd6b20;
+}
+
+.menu-active-2 {
+    position: relative;
+}
+.menu-active-2:after {
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    content: "";
+    height: 3px;
+    width: 75%;
+    background-color: #dd6b20;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+.overlay-black {
+    position: relative;
+}
+.overlay-black:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    height: 100%;
+    background-image: -webkit-linear-gradient(
+        rgba(0, 0, 0, 0.01) 0%,
+        rgba(0, 0, 0, 0.1) 45%,
+        rgba(0, 0, 0, 0.75) 100%
+    );
+    background-image: -o-linear-gradient(
+        rgba(0, 0, 0, 0.01) 0%,
+        rgba(0, 0, 0, 0.1) 45%,
+        rgba(0, 0, 0, 0.75) 100%
+    );
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.01) 0%,
+        rgba(0, 0, 0, 0.1) 45%,
+        rgba(0, 0, 0, 0.75) 100%
+    );
+    z-index: 1;
+}
+
+.triangle-orange {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 75px 75px;
+    border-color: transparent transparent #fffaf0 transparent;
+}
+
+.triangle-blue {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 75px 75px;
+    border-color: transparent transparent #ebf8ff transparent;
+}
+
+// Location Picker
+.map_container,
+#map {
+    min-height: 200px;
+    height: 100%;
+    width: 100%;
+}
+
+.pac-card {
+    margin: 10px 10px 0 0;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+}
+
+#pac-container {
+    padding-bottom: 12px;
+    margin-right: 12px;
+}
+
+.pac-container {
+    z-index: 9999;
+}
+
+.pac-controls {
+    display: inline-block;
+    padding: 5px 11px;
+}
+
+.pac-controls label {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#pac-input {
+    padding: 7px 14px;
+    margin: 10px;
+    width: 30%;
+    min-width: 300px;
+    font-size: 15px;
+    font-weight: 300;
+    text-overflow: ellipsis;
+    border: 0;
+    border-radius: 2px 0 0 2px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#pac-input:focus {
+    border-color: #4d90fe;
+}
+
+// Image Overlay - Black
+.overlay-black:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    height: 100%;
+    background-image: -webkit-linear-gradient(
+        rgba(0, 0, 0, 0.01) 0%,
+        rgba(0, 0, 0, 0.1) 45%,
+        rgba(0, 0, 0, 0.75) 100%
+    );
+    background-image: -o-linear-gradient(
+        rgba(0, 0, 0, 0.01) 0%,
+        rgba(0, 0, 0, 0.1) 45%,
+        rgba(0, 0, 0, 0.75) 100%
+    );
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.01) 0%,
+        rgba(0, 0, 0, 0.1) 45%,
+        rgba(0, 0, 0, 0.75) 100%
+    );
+    z-index: 1;
+}
+
+// Quill Editor Customization
+.bg-facebook {
+    background-color: #3b5998 !important;
+}
+.bg-twitter {
+    background-color: #38a1f3 !important;
+}
+.bg-linkedin {
+    background-color: #0e76a8 !important;
+}
+.bg-whatsapp {
+    background-color: #4fce5d !important;
+}
+.job-description a {
+    text-decoration: none;
+    display: inline-block;
+    color: #29a9c9;
+    border-bottom: 2px solid #cae9f1;
+}
+.job-description a:hover,
+.job-description a:focus {
+    text-decoration: none;
+    border-color: #87cfe0;
+    color: #2598b5;
+}
+
+.ql-editor {
+    line-height: 1.5;
+    padding: 0 !important;
+}
+
+.ql-editor ol,
+.ql-editor ul {
+    padding-left: 0 !important;
+}
+.ql-editor ol > li,
+.ql-editor ul > li {
+    list-style-type: none;
+    margin-bottom: 0.5rem !important;
+}
+
+.ql-editor .ql-indent-1:not(.ql-direction-rtl),
+.ql-editor li.ql-indent-1:not(.ql-direction-rtl) {
+    padding-left: 4rem !important;
+}
+
+.ql-editor .ql-indent-2:not(.ql-direction-rtl),
+.ql-editor li.ql-indent-2:not(.ql-direction-rtl) {
+    padding-left: 6.5rem !important;
+}

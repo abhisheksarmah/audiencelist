@@ -1,0 +1,120 @@
+.vue__time-picker {
+    display: inline-block;
+    position: relative;
+    font-size: 1em;
+    width: 10em;
+    font-family: sans-serif;
+    vertical-align: middle;
+}
+.vue__time-picker * {
+    box-sizing: border-box;
+}
+.vue__time-picker input.display-time {
+    border: 1px solid #d2d2d2;
+    width: 10em;
+    height: 2.2em;
+    padding: 0.3em 0.5em;
+    font-size: 1em;
+}
+.vue__time-picker input.display-time:disabled,
+.vue__time-picker input.display-time.disabled {
+    color: #d2d2d2;
+}
+.vue__time-picker .clear-btn {
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: -0.15em;
+    z-index: 3;
+    font-size: 1.1em;
+    line-height: 1em;
+    vertical-align: middle;
+    width: 1.3em;
+    color: #d2d2d2;
+    background: rgba(255, 255, 255, 0);
+    text-align: center;
+    font-style: normal;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+.vue__time-picker .clear-btn:hover {
+    color: #797979;
+    cursor: pointer;
+}
+.vue__time-picker .time-picker-overlay {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.vue__time-picker .dropdown {
+    position: absolute;
+    top: 3.2em;
+    left: 0;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    z-index: 2000;
+    /* margin: 3px 0 0 0; */
+    border-top: 1px solid #eee;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.vue__time-picker .dropdown .select-list {
+    width: 10em;
+    height: 10em;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+.vue__time-picker .dropdown ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    flex: 1 1 0.00001px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.vue__time-picker .dropdown ul.minutes,
+.vue__time-picker .dropdown ul.seconds,
+.vue__time-picker .dropdown ul.apms {
+    border-left: 1px solid #fff;
+}
+.vue__time-picker .dropdown ul li {
+    list-style: none;
+    text-align: center;
+    padding: 0.3em 0;
+    color: #161616;
+}
+.vue__time-picker .dropdown ul li:not(.hint):not([disabled]):hover,
+.vue__time-picker .dropdown ul li:not(.hint):not([disabled]):focus {
+    background: rgba(0, 0, 0, 0.08);
+    color: #161616;
+    cursor: pointer;
+}
+.vue__time-picker .dropdown ul li:not([disabled]).active,
+.vue__time-picker .dropdown ul li:not([disabled]).active:hover,
+.vue__time-picker .dropdown ul li:not([disabled]).active:focus {
+    background: #3182ce;
+    color: #fff;
+}
+.vue__time-picker .dropdown ul li[disabled],
+.vue__time-picker .dropdown ul li[disabled]:hover {
+    background: transparent;
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+.vue__time-picker .dropdown .hint {
+    color: #a5a5a5;
+    cursor: default;
+    font-size: 0.8em;
+}
