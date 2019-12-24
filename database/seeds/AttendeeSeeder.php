@@ -12,8 +12,6 @@ class AttendeeSeeder extends Seeder
      */
     public function run()
     {
-        factory(Attendee::class, 30)->create([
-            'attendence_list_id' => rand(1, 10)
-        ]);
+        factory(Attendee::class, 30)->create();
     }
 }

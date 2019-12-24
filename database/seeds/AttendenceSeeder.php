@@ -12,9 +12,6 @@ class AttendenceSeeder extends Seeder
      */
     public function run()
     {
-        $value = rand(1, 30);
-        factory(Attendence::class, 30)->create([
-            'attendence_list_id' => $value
-        ]);
+        factory(Attendence::class, 100)->create();
     }
 }

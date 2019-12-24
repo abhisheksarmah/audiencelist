@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateAttendencesTable extends Migration
 {
@@ -25,11 +26,16 @@ class CreateAttendencesTable extends Migration
                 ->references('id')
                 ->on('attendence_lists')
                 ->onDelete('cascade');
+
             $table->foreign('attendee_id')
                 ->references('id')
                 ->on('attendees')
                 ->onDelete('cascade');
         });
+
+        Artisan::call('db:seed', [
+            '--class' => AttendenceSeeder::class
+        ]);
     }
 
     /**

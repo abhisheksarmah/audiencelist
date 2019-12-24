@@ -18,6 +18,8 @@ class CreateAttendenceListsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('organiser_id');
             $table->string('name');
+            $table->timestamp('start_date')->nullable();
+            $table->timestamp('end_date')->nullable();
             $table->timestamps();
 
             $table->foreign('organiser_id')

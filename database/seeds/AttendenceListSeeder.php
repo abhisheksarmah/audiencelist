@@ -12,8 +12,6 @@ class AttendenceListSeeder extends Seeder
      */
     public function run()
     {
-        factory(AttendenceList::class, 10)->create([
-            'organiser_id' => 1
-        ]);
+        factory(AttendenceList::class, 10)->create();
     }
 }

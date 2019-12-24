@@ -15,14 +15,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        factory(Attendee::class, 30)->create()->each(function ($attendee) {
-            $attendee->attendences()->save(
-                factory(Attendence::class)->make([
-                    'attendee_id' => NULL,
-                    'attendence_list_id' => rand(1, 10)
-                ])
-            );
-        });
+        // factory(Attendee::class, 30)->create()->each(function ($attendee) {
+        //     $attendee->attendences()->saveMany(
+        //         factory(Attendence::class, 3)->make([
+        //             'attendee_id' => NULL,
+        //             'attendence_list_id' => $attendee->attendence_list_id
+        //         ])
+        //     );
+        // });
         // $this->call(UsersTableSeeder::class);
     }
 }

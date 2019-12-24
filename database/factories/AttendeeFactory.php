@@ -9,7 +9,7 @@ use Faker\Generator as Faker;
 
 $factory->define(Attendee::class, function (Faker $faker) {
     return [
-        'attendence_list_id' => factory(AttendenceList::class)->create()->id,
+        'attendence_list_id' => AttendenceList::all()->random()->id,
         'name' => $faker->name,
         'ticket_id' => Str::upper(Str::random(8))
     ];
