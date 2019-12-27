@@ -322,48 +322,5 @@ export default {
 		}
 	}
 };
-</script>
-
-<style>
-.active {
-	position: relative;
-}
-.active:after {
-	bottom: 0;
-	position: absolute;
-	left: 0;
-	right: 0;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	content: "";
-	height: 3px;
-	width: 100%;
-	border-radius: 1000px;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
-	background-color: #4299e1; /* Change this color a/c to theme */
-}
-
-#sideNav {
-	transition: all 0.3s ease-in-out;
-}
-
-#siteWrapper.opened #sideNav {
-	top: 0;
-	left: 0rem;
-	margin-left: 0rem;
-}
-
-#siteWrapper.opened #sideNavBg {
-	content: "";
-	width: 100%;
-	height: 100%;
-	left: 0px;
-	top: 0px;
-	position: fixed;
-	z-index: 30;
-	background: rgba(0, 0, 20, 0.4);
-}
-</style>
+</script> 
  

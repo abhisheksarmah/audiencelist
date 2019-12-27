@@ -162,11 +162,4 @@ export default {
 		}
 	}
 };
-</script>
-
-<style>
-.is-disabled .pika-button,
-.is-inrange .pika-button {
-	background: #f7fafc;
-}
-</style>
+</script> 

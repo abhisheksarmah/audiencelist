@@ -98,3 +98,7 @@
 .date-input table td.is-selected button:hover {
     color: white;
 }
+.is-disabled .pika-button,
+.is-inrange .pika-button {
+    background: #f7fafc;
+}
